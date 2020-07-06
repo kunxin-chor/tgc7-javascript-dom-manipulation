@@ -125,3 +125,59 @@ btn.addEventListener('click', function(){
     ...
 })
 ```
+
+# Adding HTML elements dynamically to an existing HTML document
+
+First thing: we must always **add into** an existing HTML element. If no parent, you can always just
+choose the `<body>` element.
+
+## Easier technique:  use `innerHTML`
+
+1. Select the parent
+    ```
+    let p = document.getElementById('container');
+    ```
+
+2. Change the innerHTML of the parent
+    ```
+    p.innerHTML="<p>Hello World</p>";
+    ```
+
+### Another example: more complex HTML
+This will replace **all** the elements that are already in the parent
+```
+p.innerHTML=`
+    <h1>Welcome to my Dog's Photo Album</h1>
+    <img src="images/dog.jpg"/>
+`
+```
+
+## Appending using `innerHTML`
+Note that we are adding to the back of the **existing** `innerHTML`
+```
+p.innerHTML = p.innerHTML + `<li>${randomNumber}</li>`
+```
+
+**NOTE:** Whenever we change the `innerHTML`, all the children elements within the parent
+are **recreated**, so any event listeners attached to them
+will be gone!!
+
+## `createElement`
+
+```
+// STEP ONE: SELECT THE PARENT
+let text = document.getElementById('textbox').value;
+let p = document.getElementById("container3");
+
+// STEP TWO: CREATE THE ELEMENT
+// create the element
+// createElement takes in one argument, which is the tag name of the HTML
+// element that we want to create
+let newElement = document.createElement("p");  // <p></p>
+
+newElement.innerText="Hello World";
+
+// STEP THREE: ADD THE NEW ELEMENT AS CHILD OF THE PARENT
+p.appendChild(newElement);
+
+```
