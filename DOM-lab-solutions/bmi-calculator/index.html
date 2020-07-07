@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+  </head>
+  <body>
+    <div>
+        <input type="text" id="weight" placeholder="Enter weight"/>
+    </div>
+    <div>
+        <input type="text" id="height" placeholder="Enter height"/>
+    </div>
+    <div>
+        <!-- the class is for stlying, the name is to group the radio button together so that
+        only one radio button can be clicked at a time. And the value is basically what data
+        is stored in the radio button. We use the value to differnate which radio button has been checked -->
+        <input type="radio" value="imperial" class="units" name="units"/>Imperial
+        <input type="radio" value="metric" class="units" name="units"/>Metric
+    </div>
+    <button id="calculate-btn">Calculate BMI</button>
+    <script src="bmi-calculator.js"></script>
+  </body>
+</html>
