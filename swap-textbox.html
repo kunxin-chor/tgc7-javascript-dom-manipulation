@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="left"/>
+    <input type="text" id="right"/>
+    <button id="swap-btn">Swap</button>
+    <script>
+        document.querySelector("#swap-btn").addEventListener('click', function() {
+            let temp = document.querySelector('#left').value;
+            document.querySelector('#left').value = document.querySelector('#right').value;
+            document.querySelector('#right').value = temp;
+        })
+    </script>
+</body>
+</html>
