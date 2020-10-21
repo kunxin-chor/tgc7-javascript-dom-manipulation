@@ -1,0 +1,14 @@
+[
+  {
+    "type": "digital",
+    "display_name": "Digital"
+  },
+  {
+    "type": "physical",
+    "display_name": "Physical"
+  },
+  {
+    "type": "service",
+    "display_name": "Online service"
+  }
+]
